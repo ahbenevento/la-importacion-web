@@ -1,8 +1,6 @@
-# Herramienta para uso exclusio de Laboratorio Azul
+Esta página describe el funcionamiento de la herramienta encargada de migrar los datos hacia el servidor Web que aloja la aplicación para uso exclusivo de clientes.
 
-## Permite importar datos hacia la aplicación Web de clientes
-
-Esta herramienta es la encargada de migrar los datos en archivos con formato **CSV** de forma programada como manual. Además permite enviar archivos comprimidos *Zip* con los ficheros PDF de cada uno de los análisis finalizados.
+Permite enviar toda la información en archivos con formato **CSV** de forma programada como manual. Además brinda la posibilidad de enviar archivos comprimidos *Zip* con los ficheros PDF de cada uno de los análisis finalizados.
 
 ### Instalación y configuración
 

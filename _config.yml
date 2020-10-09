@@ -1,5 +1,4 @@
 theme: jekyll-theme-cayman
-title: "Laboratorio Azul: importación Web"
-source: false
+title: "Laboratorio Azul: aplicación Web para clientes"
 github:
   is_project_page: false
