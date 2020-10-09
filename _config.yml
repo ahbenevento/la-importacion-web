@@ -3,3 +3,4 @@ title: "Laboratorio Azul: importación Web"
 github:
   zip_url: http://example.com/download.zip
   another_url: http://example.com/download.zip
+  is_project_page: false
