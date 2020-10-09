@@ -6,15 +6,15 @@ Permite enviar toda la información en archivos con formato **CSV** de forma pro
 
 1.    Descargue la última versión mediante el siguiente enlace: http://pragmatica.com.ar/veremos
 
-2.    Descomprima el contenido del archivo *Zip* del punto anterior en una carpeta deseada (existente o nueva).
+2.    Descomprima el contenido del archivo *Zip* del punto anterior en una carpeta deseada.
 
-3.    Defina la variable de entorno **IMPORTACION-WEB** con el siguiente valor: *http://laboratorioazul.com.ar/clientes/js/cfg_importacion*
+3.    Defina la variable de entorno **IMPORTACION-WEB** con el siguiente valor: `http://laboratorioazul.com.ar/clientes/js/cfg_importacion`
 
         A.    Abra el **Panel de control** y diríjase a **Sistema y seguridad** / **Sistema**.
 
-        B.    Clic sobre **Configuración avanzada del sistema** y luego sobre el botón **Variables de entorno...**
+        B.    Clic sobre **Configuración avanzada del sistema** y luego sobre el botón **Variables de entorno**.
 
-        C.    En el área definida como *Variables del sistema* haga clic en el botón **Nueva...**.
+        C.    En el área definida como *Variables del sistema* haga clic en el botón **Nueva**.
 
         D.    En el cuadro de diálogo *Nueva variable del sistema* ingrese los datos mensionados en el punto 3.
 
@@ -36,7 +36,7 @@ la-importar-web <archivos_importar> [-enc <valor-buscar | cantidad>]
 
 > **Comienza el proceso de importación** según los parámetros definidos.
 
-> El parámetro **<archivos_importar>** es una lista de uno o más archivos a incluir, separados por espacios. Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo **\*.csv**).
+> El parámetro ** <archivos_importar> ** es una lista de uno o más archivos a incluir, separados por espacios. Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo ** \*.csv **).
 
 > El parámetro **-enc** permite indicar la cantidad de líneas utilizadas como encabezado en los archivos *CSV*. También puede indicar un texto que indique el comienzo de la línea que separa el encabezado del resto del contenido. Consulte los ejemplos presentados más abajo.
 
