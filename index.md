@@ -38,8 +38,9 @@ la-importar-web <archivos_importar> [-enc <cantidad | valor-comienzo-línea>]
 
 > El parámetro **archivos_importar** es una lista de uno o más archivos a incluir (separados por espacios). Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo *.csv).
 
-> El parámetro **-enc** permite indicar la *cantidad* de líneas utilizadas como encabezado en los archivos *CSV*. O un texto que indique el comienzo de la línea que separa el encabezado del resto del contenido (*valor-comienzo-línea*). Consulte los ejemplos presentados más abajo.
+> **-enc** permite indicar la *cantidad* de líneas utilizadas como encabezado en los archivos *CSV*. O un texto que indique el comienzo de la línea que separa el encabezado del resto del contenido (*valor-comienzo-línea*). Consulte los ejemplos presentados más abajo.
 
+> **-aftp** permite indicar la *cantidad* máxima de archivos a enviar de por FTP de forma simultanea. Si se omite el valor predeterminado es 5.
 
 ### Funcionamiento
 
