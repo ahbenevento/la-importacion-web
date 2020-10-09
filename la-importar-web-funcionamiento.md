@@ -79,4 +79,4 @@ la-importar-web veterinarios.csv *.txt *.zip
 
 ---
 
-Última fecha de actualización: **8/10/2020**. Desarrollado por **Pragmática** (http://pragmatica.com.ar)
+Última fecha de actualización: **9/10/2020**. Desarrollado por **Pragmática** (http://pragmatica.com.ar)
