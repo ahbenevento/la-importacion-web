@@ -38,7 +38,7 @@ la-importar-web <archivos_importar> [-enc <cantidad | valor-comienzo-línea>]
 
 > El parámetro **archivos_importar** es una lista de uno o más archivos a incluir (separados por espacios). Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo *.csv).
 
-> El parámetro **-enc** permite indicar la *cantidad* de líneas utilizadas como encabezado en los archivos *CSV*. También puede indicar un texto que indique el comienzo de la línea que separa el encabezado del resto del contenido (*valor-comienzo-línea*). Consulte los ejemplos presentados más abajo.
+> El parámetro **-enc** permite indicar la *cantidad* de líneas utilizadas como encabezado en los archivos *CSV*. O un texto que indique el comienzo de la línea que separa el encabezado del resto del contenido (*valor-comienzo-línea*). Consulte los ejemplos presentados más abajo.
 
 
 ### Funcionamiento
@@ -55,7 +55,7 @@ la-importar-web <archivos_importar> [-enc <cantidad | valor-comienzo-línea>]
 la-importar-web c:\temp\*.csv c:\temp\*.zip
 ```
 
-> Importa todos los archivos *.csv* y *.zip* dentro de la carpeta *c:\temp*.
+> Importa todos los archivos *.csv* y *.zip* ubicados en la carpeta *c:\temp*.
 
 ```
 la-importar-web c:\temp\*.csv c:\temp\*.zip -enc 2
