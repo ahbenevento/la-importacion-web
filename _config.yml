@@ -2,4 +2,4 @@ theme: jekyll-theme-cayman
 title: "Laboratorio Azul: importación Web"
 github:
   zip_url: http://example.com/download.zip
-  another_url: another value
+  another_url: http://example.com/download.zip
