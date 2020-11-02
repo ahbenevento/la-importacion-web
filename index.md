@@ -8,7 +8,7 @@ Permite enviar toda la información en archivos con formato **CSV** de forma pro
 
 2.    Descomprima el contenido del archivo *Zip* del punto anterior en una carpeta deseada.
 
-3.    Defina la variable de entorno **IMPORTACION-WEB** con el siguiente valor: <http://laboratorioazul.com.ar/clientes/js/cfg_importacion>
+3.    Defina la variable de entorno **IMPORTACION-WEB** con el siguiente valor: <http://laboratorioazul.com.ar/clientes/js/cfg_migracion>
 
         A.    Abra el **Panel de control** y diríjase a **Sistema y seguridad** / **Sistema**.
 
@@ -26,21 +26,24 @@ Permite enviar toda la información en archivos con formato **CSV** de forma pro
 La herramienta puede utilizarse de dos formas:
 
 ```
-la-importar-web -probar
+la-migrar -probar
 ```
 > **Permite realizar una prueba de conexión al servidor Web.** Debería utilizarse una vez realizada la instalación, y cuando la configuración del equipo o la red cambien.
 
 ```
-la-importar-web <archivos_importar> [-enc <cantidad | valor-comienzo-línea>]
+la-migrar <archivos_migrar> [-enc <cantidad | valor-comienzo-línea>] [-aftp <cantidad>] [-rftp <cantidad>]
 ```
 
-> **Comienza el proceso de importación** según los parámetros definidos.
+> **Comienza el proceso de migración de datos** según los parámetros definidos.
 
-> El parámetro **archivos_importar** es una lista de uno o más archivos a incluir (separados por espacios). Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo *.csv).
+> El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir (separados por espacios). Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo *.csv).
 
 > **-enc** permite indicar la *cantidad* de líneas utilizadas como encabezado en los archivos *CSV*. O un texto que indique el comienzo de la línea que separa el encabezado del resto del contenido (*valor-comienzo-línea*). Consulte los ejemplos presentados más abajo.
 
 > **-aftp** permite indicar la *cantidad* máxima de archivos a enviar de por FTP de forma simultanea. Si se omite el valor predeterminado es 5.
+
+> **-rftp** define la cantidad máxima de reintentos por error en las conexiones FTP. El valor predeterminado es de un único intento.
+
 
 ### Funcionamiento
 
@@ -48,34 +51,38 @@ la-importar-web <archivos_importar> [-enc <cantidad | valor-comienzo-línea>]
 
 2.    Los archivos con extensión *.csv* o *.txt* serán procesados como *CSV*. Si alguno de los archivos no supera la validación todo el proceso será cancelado. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
 
-3.    Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados. Recuerde que el proceso de importación que se inicia una vez enviados todos los archivos ignora cualquier fichero que no sea de este tipo.
+3.    Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados. Recuerde que el proceso de migración que se inicia una vez enviados todos los archivos ignora cualquier fichero que no sea de este tipo.
 
 ### Ejemplos
 
 ```
-la-importar-web c:\temp\*.csv c:\temp\*.zip
+la-migrar c:\temp\*.csv c:\temp\*.zip
 ```
 
-> Importa todos los archivos *.csv* y *.zip* ubicados en la carpeta *c:\temp*.
+> Incluye todos los archivos *.csv* y *.zip* ubicados en la carpeta *c:\temp*.
 
 ```
-la-importar-web c:\temp\*.csv c:\temp\*.zip -enc 2
+la-migrar c:\temp\*.csv c:\temp\*.zip -enc 2
 ```
 
 > El mismo ejemplo pero indicando que los archivos *CSV* cuentan con un encabezado de 2 líneas.
 
 ```
-la-importar-web c:\temp\*.csv c:\temp\*.zip -enc "---"
+la-migrar c:\temp\*.csv c:\temp\*.zip -enc "---"
 ```
 
 > Una vez más el mismo ejemplo pero esta vez indicando que los archivos *CSV* tienen varias líneas de encabezado donde la última de este grupo comienza con (al menos) 3 guiones.
 
 ```
-la-importar-web veterinarios.csv *.txt *.zip
+la-migrar veterinarios.csv *.txt *.zip
 ```
 
 > Un ejemplo alternativo que muestra cómo indicar varios archivos con nombre único o mediante comodines. En este caso en la carpeta actual donde se encuentre.
 
 ---
 
+<small>
+
 Última actualización: **9/10/2020**. Desarrollado por **Pragmática** <http://pragmatica.com.ar>
+
+</small>
