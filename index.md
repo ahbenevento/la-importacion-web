@@ -2,9 +2,9 @@ Esta página describe el funcionamiento de la herramienta encargada de migrar lo
 
 Permite enviar toda la información en archivos con formato **CSV** de forma programada como manual. Además brinda la posibilidad de enviar archivos comprimidos *Zip* con los ficheros *PDF* de cada uno de los análisis finalizados.
 
-### Instalación y configuración
+## Instalación y configuración
 
-1.    Descargue la última versión mediante el siguiente enlace: [la-migrar-1.0.0.zip](la-migrar-1.0.0.zip).
+1.    Descargue la última versión mediante el siguiente enlace: [la-migrar-1.0.0.zip](la-migrar-1.0.0.zip)
 
 2.    Descomprima el contenido del archivo *Zip* del punto anterior en una carpeta deseada.
 
@@ -21,7 +21,10 @@ Permite enviar toda la información en archivos con formato **CSV** de forma pro
         E.    Acepte todos los cambios y reinicie el equipo.
 
 
-### Modo de uso
+![Nueva variable del sistema](var-sistema.png)
+
+
+## Modo de uso
 
 La herramienta puede utilizarse de dos formas:
 
@@ -45,7 +48,7 @@ la-migrar <archivos_migrar> [-enc <cantidad | comienzo-línea>] [-aftp <cantidad
 > **-rftp** define la cantidad máxima de reintentos por error en las conexiones FTP. El valor predeterminado es de dos intentos en caso de fallo.
 
 
-### Funcionamiento
+## Funcionamiento
 
 1.    Las extensiones aceptadas son: *.csv*, *.txt* y *.zip*. Cualquier otro tipo de archivo será simplemente ignorado.
 
@@ -53,7 +56,7 @@ la-migrar <archivos_migrar> [-enc <cantidad | comienzo-línea>] [-aftp <cantidad
 
 3.    Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados. Recuerde que el proceso de importación que se inicia una vez enviados todos los archivos **ignora cualquier fichero que no sea *PDF***.
 
-### Ejemplos
+## Ejemplos
 
 ```
 la-migrar c:\temp\*.csv c:\temp\*.zip
