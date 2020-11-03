@@ -16,9 +16,11 @@ Permite enviar toda la información en archivos con formato **CSV** de forma pro
 
         C.    En el área definida como *Variables del sistema* haga clic en el botón **Nueva**.
 
-        D.    En el cuadro de diálogo *Nueva variable del sistema* ingrese los datos mensionados en el punto 3. ![Nueva variable del sistema](var-sistema.png)
+        D.    En el cuadro de diálogo *Nueva variable del sistema* ingrese los datos mensionados en el punto 3.
 
         E.    Acepte todos los cambios y reinicie el equipo.
+
+![Nueva variable del sistema](var-sistema.png)
 
 
 ## Modo de uso
@@ -83,6 +85,6 @@ la-migrar veterinarios.csv *.txt *.zip -rftp 5
 
 <small>
 
-Última actualización: **9/10/2020**. Desarrollado por **Pragmática** <http://pragmatica.com.ar>
+Última actualización: **3/11/2020**. Desarrollado por **Pragmática** <http://pragmatica.com.ar>
 
 </small>
