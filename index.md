@@ -55,7 +55,7 @@ Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con 
 
 Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados.
 
-> El proceso de importación que se inicia una vez enviados todos los archivos **ignora cualquier fichero con una extensión no mencionada anteriormente**.
+> El proceso de importación posterior al envío de archivos **ignorará cualquier fichero con otra extesión no mencionada**.
 
 
 ## Ejemplos
@@ -83,6 +83,7 @@ la-migrar veterinarios.csv *.txt *.zip -rftp 5
 ```
 
 > Un ejemplo alternativo que muestra cómo indicar varios archivos con nombre único o mediante comodines. En este caso en la carpeta actual donde se encuentre, y reintentando 5 veces en caso de fallos en las conexiones FTP.
+
 
 ---
 
