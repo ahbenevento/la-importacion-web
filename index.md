@@ -42,17 +42,18 @@ El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir 
 
 **-enc** permite indicar la *cantidad* de líneas utilizadas como encabezado en los archivos CSV. También puede definirse con un texto (*comienzo-línea*) que indique el comienzo de la línea que separa el encabezado del resto del contenido. De esta forma permite incluir archivos con cantidad de líneas de encabezado variables.
 
-**-aftp** permite indicar la *cantidad* máxima de archivos a enviar de por FTP de forma simultanea. Si se omite el valor predeterminado es de 2 archivos a la vez.
+**-aftp** permite indicar la *cantidad* máxima de archivos a enviar por FTP de forma simultanea. Si se omite el valor predeterminado es de 2 archivos a la vez.
 
-**-rftp** define la cantidad máxima de reintentos por error en las conexiones FTP. El valor predeterminado es de dos intentos en caso de fallo.
+**-rftp** define la *cantidad* máxima de reintentos por error en las conexiones FTP. El valor predeterminado es de 2 intentos en caso de fallo.
 
-> Consulte los ejemplos presentados más abajo.
+> Para más información consulte los ejemplos presentados más abajo.
+
 
 ## Funcionamiento
 
 Las extensiones aceptadas son: *.csv*, *.txt* y *.zip*. Cualquier otro tipo de archivo será simplemente ignorado.
 
-Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con formato CSV. Si alguno de los archivos no supera la validación todo el proceso será cancelado. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
+Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con formato CSV. Si alguno de los archivos no supera la validación **todo el proceso será cancelado**. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
 
 Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados.
 
