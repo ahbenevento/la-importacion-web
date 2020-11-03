@@ -4,7 +4,7 @@ Permite enviar toda la información en archivos con formato **CSV** de forma pro
 
 ### Instalación y configuración
 
-1.    Descargue la última versión mediante el siguiente enlace: <http://pragmatica.com.ar/veremos>
+1.    Descargue la última versión mediante el siguiente enlace: [la-migrar-1.0.0.zip](la-migrar-1.0.0.zip).
 
 2.    Descomprima el contenido del archivo *Zip* del punto anterior en una carpeta deseada.
 
@@ -31,27 +31,27 @@ la-migrar -probar
 > **Permite realizar una prueba de conexión al servidor Web.** Debería utilizarse una vez realizada la instalación, y cuando la configuración del equipo o la red cambien.
 
 ```
-la-migrar <archivos_migrar> [-enc <cantidad | valor-comienzo-línea>] [-aftp <cantidad>] [-rftp <cantidad>]
+la-migrar <archivos_migrar> [-enc <cantidad | comienzo-línea>] [-aftp <cantidad>] [-rftp <cantidad>]
 ```
 
 > **Comienza el proceso de migración de datos** según los parámetros definidos.
 
 > El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir (separados por espacios). Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo *.csv).
 
-> **-enc** permite indicar la *cantidad* de líneas utilizadas como encabezado en los archivos *CSV*. O un texto que indique el comienzo de la línea que separa el encabezado del resto del contenido (*valor-comienzo-línea*). Consulte los ejemplos presentados más abajo.
+> **-enc** permite indicar la *cantidad* de líneas utilizadas como encabezado en los archivos *CSV*. También puede definirse con un texto que indique el comienzo de la línea que separa el encabezado del resto del contenido (*comienzo-línea*). Consulte los ejemplos presentados más abajo.
 
-> **-aftp** permite indicar la *cantidad* máxima de archivos a enviar de por FTP de forma simultanea. Si se omite el valor predeterminado es 5.
+> **-aftp** permite indicar la *cantidad* máxima de archivos a enviar de por FTP de forma simultanea. Si se omite el valor predeterminado es de 2 archivos a la vez.
 
-> **-rftp** define la cantidad máxima de reintentos por error en las conexiones FTP. El valor predeterminado es de un único intento.
+> **-rftp** define la cantidad máxima de reintentos por error en las conexiones FTP. El valor predeterminado es de dos intentos en caso de fallo.
 
 
 ### Funcionamiento
 
 1.    Las extensiones aceptadas son: *.csv*, *.txt* y *.zip*. Cualquier otro tipo de archivo será simplemente ignorado.
 
-2.    Los archivos con extensión *.csv* o *.txt* serán procesados como *CSV*. Si alguno de los archivos no supera la validación todo el proceso será cancelado. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
+2.    Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con formato *CSV*. Si alguno de los archivos no supera la validación todo el proceso será cancelado. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
 
-3.    Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados. Recuerde que el proceso de migración que se inicia una vez enviados todos los archivos ignora cualquier fichero que no sea de este tipo.
+3.    Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados. Recuerde que el proceso de importación que se inicia una vez enviados todos los archivos **ignora cualquier fichero que no sea *PDF***.
 
 ### Ejemplos
 
@@ -68,16 +68,16 @@ la-migrar c:\temp\*.csv c:\temp\*.zip -enc 2
 > El mismo ejemplo pero indicando que los archivos *CSV* cuentan con un encabezado de 2 líneas.
 
 ```
-la-migrar c:\temp\*.csv c:\temp\*.zip -enc "---"
+la-migrar c:\temp\*.csv c:\temp\*.zip -enc "--"
 ```
 
-> Una vez más el mismo ejemplo pero esta vez indicando que los archivos *CSV* tienen varias líneas de encabezado donde la última de este grupo comienza con (al menos) 3 guiones.
+> Una vez más el mismo ejemplo pero esta vez indicando que los archivos *CSV* tienen varias líneas de encabezado donde la última de este grupo comienza con (al menos) 2 guiones.
 
 ```
-la-migrar veterinarios.csv *.txt *.zip
+la-migrar veterinarios.csv *.txt *.zip -rftp 5
 ```
 
-> Un ejemplo alternativo que muestra cómo indicar varios archivos con nombre único o mediante comodines. En este caso en la carpeta actual donde se encuentre.
+> Un ejemplo alternativo que muestra cómo indicar varios archivos con nombre único o mediante comodines. En este caso en la carpeta actual donde se encuentre, y reintentando 5 veces en caso de fallos en las conexiones FTP.
 
 ---
 
