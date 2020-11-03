@@ -86,12 +86,6 @@ la-migrar veterinarios.csv *.txt *.zip -rftp 5
 
 > Un ejemplo alternativo que muestra cómo indicar varios archivos con nombre único o mediante comodines. En este caso en la carpeta actual donde se encuentre, y reintentando 5 veces en caso de fallos en las conexiones FTP.
 
-
 ---
 
-
-<small>
-
-Última actualización: **3/11/2020**. Desarrollado por **[Pragmática](http://pragmatica.com.ar)**.
-
-</small>
+<small>Última actualización: **3/11/2020**. Desarrollado por **[Pragmática](http://pragmatica.com.ar)**.</small>
