@@ -8,17 +8,17 @@ Permite enviar toda la información en archivos con formato **CSV** de forma pro
 
 2. Descomprima el contenido del archivo *Zip* del punto anterior en una carpeta deseada.
 
-3.  Defina la variable de entorno **IMPORTACION-WEB** con el siguiente valor: <http://laboratorioazul.com.ar/clientes/js/cfg_migracion>
+3. Defina la variable de entorno **IMPORTACION-WEB** con el siguiente valor: <http://laboratorioazul.com.ar/clientes/js/cfg_migracion>
 
-        A.    Abra el **Panel de control** y diríjase a **Sistema y seguridad** / **Sistema**.
+    A. Abra el **Panel de control** y diríjase a **Sistema y seguridad** / **Sistema**.
 
-        B.    Clic sobre **Configuración avanzada del sistema** y luego sobre el botón **Variables de entorno**.
+    B.  Clic sobre **Configuración avanzada del sistema** y luego sobre el botón **Variables de entorno**.
 
-        C.    En el área definida como *Variables del sistema* haga clic en el botón **Nueva**.
+    C. En el área definida como *Variables del sistema* haga clic en el botón **Nueva**.
 
-        D.    En el cuadro de diálogo *Nueva variable del sistema* ingrese los datos mensionados en el punto 3.
+    D. En el cuadro de diálogo *Nueva variable del sistema* ingrese los datos mensionados en el punto 3.
 
-        E.    Acepte todos los cambios y reinicie el equipo.
+    E. Acepte todos los cambios y reinicie el equipo.
 
 ![Nueva variable del sistema](var-sistema.png)
 
@@ -49,13 +49,13 @@ El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir 
 
 ## Funcionamiento
 
-1. Las extensiones aceptadas son: *.csv*, *.txt* y *.zip*. Cualquier otro tipo de archivo será simplemente ignorado.
+Las extensiones aceptadas son: *.csv*, *.txt* y *.zip*. Cualquier otro tipo de archivo será simplemente ignorado.
 
-2. Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con formato *CSV*. Si alguno de los archivos no supera la validación todo el proceso será cancelado. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
+Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con formato *CSV*. Si alguno de los archivos no supera la validación todo el proceso será cancelado. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
 
-3. Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados.
+Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados.
 
-> El proceso de importación que se inicia una vez enviados todos los archivos **ignora cualquier fichero que no se mencione en los puntos anteriores**.
+> El proceso de importación que se inicia una vez enviados todos los archivos **ignora cualquier fichero con una extensión no mencionada anteriormente**.
 
 
 ## Ejemplos
