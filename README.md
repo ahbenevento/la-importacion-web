@@ -5,8 +5,4 @@ migrar los datos hacia la aplicación Web de clientes.
 
 ---
 
-<small>
-
-Desarrollado por **[Pragmática](http://pragmatica.com.ar)**.
-
-</small>
+<small>Desarrollado por **[Pragmática](http://pragmatica.com.ar)**.</small>

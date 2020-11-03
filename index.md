@@ -2,6 +2,8 @@ Esta página describe el funcionamiento de la herramienta encargada de migrar lo
 
 Permite enviar toda la información en archivos con formato *CSV* de forma programada como manual. Además brinda la posibilidad de enviar archivos comprimidos *Zip* con los ficheros *PDF* de cada uno de los análisis finalizados.
 
+<small>Actualización: **3/11/2020**.</small>
+
 ## Instalación y configuración
 
 1. Descargue la última versión mediante el siguiente enlace: [la-migrar-1.0.0.zip](la-migrar-1.0.0.zip)
@@ -88,4 +90,4 @@ la-migrar veterinarios.csv *.txt *.zip -rftp 5
 
 ---
 
-<small>Última actualización: **3/11/2020**. Desarrollado por **[Pragmática](http://pragmatica.com.ar)**.</small>
+<small>Desarrollado por **[Pragmática](http://pragmatica.com.ar)**.</small>
