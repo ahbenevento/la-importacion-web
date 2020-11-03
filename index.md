@@ -16,12 +16,9 @@ Permite enviar toda la información en archivos con formato **CSV** de forma pro
 
         C.    En el área definida como *Variables del sistema* haga clic en el botón **Nueva**.
 
-        D.    En el cuadro de diálogo *Nueva variable del sistema* ingrese los datos mensionados en el punto 3.
+        D.    En el cuadro de diálogo *Nueva variable del sistema* ingrese los datos mensionados en el punto 3. ![Nueva variable del sistema](var-sistema.png)
 
         E.    Acepte todos los cambios y reinicie el equipo.
-
-
-![Nueva variable del sistema](var-sistema.png)
 
 
 ## Modo de uso
