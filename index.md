@@ -2,7 +2,7 @@ Esta página describe el funcionamiento de la herramienta encargada de migrar lo
 
 Permite enviar toda la información en archivos con formato *CSV* de forma programada como manual. Además brinda la posibilidad de enviar archivos comprimidos *Zip* con los ficheros *PDF* de cada uno de los análisis finalizados.
 
-<small>Actualización: **3/11/2020**.</small>
+<small>Actualización: **11/11/2020**.</small>
 
 ## Instalación y configuración
 
@@ -20,7 +20,7 @@ Permite enviar toda la información en archivos con formato *CSV* de forma progr
 
     D. En el cuadro de diálogo *Nueva variable del sistema* ingrese los datos mensionados en el punto 3.
 
-    E. Acepte todos los cambios y reinicie el equipo.
+    E. Acepte todos los cambios y reinicie la sesión actual.
 
 ![Nueva variable del sistema](var-sistema.png)
 
@@ -42,11 +42,11 @@ la-migrar <archivos_migrar> [-enc <cantidad | comienzo-línea>] [-aftp <cantidad
 
 El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir (separados por espacios). Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo *.csv).
 
-**-enc** permite indicar la *cantidad* de líneas utilizadas como encabezado en los archivos CSV. También puede definirse con un texto (*comienzo-línea*) que indique el comienzo de la línea que separa el encabezado del resto del contenido. De esta forma permite incluir archivos con cantidad de líneas de encabezado variables.
+**-enc** permite indicar la **_cantidad_** de líneas utilizadas como encabezado en los archivos CSV. También puede definirse con un texto (**_comienzo-línea_**) que indique el comienzo de la línea que separa el encabezado del resto del contenido. De esta forma permite incluir archivos con cantidad de líneas de encabezado variables.
 
-**-aftp** permite indicar la *cantidad* máxima de archivos a enviar por FTP de forma simultanea. Si se omite el valor predeterminado es de 2 archivos a la vez.
+**-aftp** permite indicar la **_cantidad_** máxima de archivos a enviar por FTP de forma simultanea. Si se omite el valor predeterminado es de 2 archivos a la vez.
 
-**-rftp** define la *cantidad* máxima de reintentos por error en las conexiones FTP. El valor predeterminado es de 2 intentos en caso de fallo.
+**-rftp** define la **_cantidad_** máxima de reintentos por error en las conexiones FTP. El valor predeterminado es de 2 intentos en caso de fallo.
 
 > Para más información consulte los ejemplos presentados más abajo.
 
@@ -55,11 +55,20 @@ El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir 
 
 Las extensiones aceptadas son: *.csv*, *.txt* y *.zip*. Cualquier otro tipo de archivo será simplemente ignorado.
 
-Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con formato CSV. Si alguno de los archivos no supera la validación **todo el proceso será cancelado**. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
+Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con formato *CSV*. Si alguno de los archivos no supera la validación **todo el proceso será cancelado**. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
+
+Esta herramienta es capaz de identificar el caracter utilizado para separar las columnas. La siguiente lista muestra los caracteres habilitados para utilizarse como separadores y el orden en que son comprobados:
+
+| Orden | Caracter | Nombre |
+|:-----:|:--------:|--------|
+|   1   |**```,```**    | coma   |
+|   2   |**```;```**    | punto y coma   |
+|   3   |**```[tab]```**| tabulador       |
+|   4   |**```'```**    | comilla simple       |
 
 Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados.
 
-> El proceso de importación posterior al envío de archivos **ignorará cualquier fichero con otra extesión no mencionada**.
+> El proceso de importación lanzado una vez se finaliza el envío de archivos **ignorará cualquier fichero con otra extesión no mencionada**.
 
 
 ## Ejemplos
