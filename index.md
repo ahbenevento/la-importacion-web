@@ -1,6 +1,6 @@
 Esta página describe el funcionamiento de la herramienta encargada de migrar los datos hacia el servidor Web que aloja la aplicación para uso exclusivo de clientes.
 
-Permite enviar toda la información en archivos con formato *CSV* de forma programada como manual. Además brinda la posibilidad de enviar archivos comprimidos *Zip* con los ficheros *PDF* de cada uno de los análisis finalizados.
+Permite enviar toda la información en archivos con formato CSV de forma programada como manual. Además brinda la posibilidad de enviar archivos comprimidos ZIP con los ficheros PDF de cada uno de los análisis finalizados.
 
 <small>Actualización: **11/11/2020**.</small>
 
@@ -40,7 +40,7 @@ la-migrar <archivos_migrar> [-enc <cantidad | comienzo-línea>] [-aftp <cantidad
 
 **Comienza el proceso de migración de datos** según los parámetros definidos.
 
-El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir (separados por espacios). Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo *.csv).
+El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir (separados por espacios). Puede indicar el nombre completo de cada uno o incluso utilizar comodines para indicar todos los archivos de una extensión (por ejemplo `*.csv`).
 
 **-enc** permite indicar la **_cantidad_** de líneas utilizadas como encabezado en los archivos CSV. También puede definirse con un texto (**_comienzo-línea_**) que indique el comienzo de la línea que separa el encabezado del resto del contenido. De esta forma permite incluir archivos con cantidad de líneas de encabezado variables.
 
@@ -53,9 +53,9 @@ El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir 
 
 ## Funcionamiento
 
-Las extensiones aceptadas son: *.csv*, *.txt* y *.zip*. Cualquier otro tipo de archivo será simplemente ignorado.
+Las extensiones aceptadas son: `.csv`, `.txt` y `.zip`. Cualquier otro tipo de archivo será simplemente ignorado.
 
-El proceso de migración valida y normaliza los archivos *CSV* según los parámetros definidos y los requerimientos definidos en el servidor. Además envía simultaneamente todos los archivos *ZIP* que se especifiquen.
+El proceso de migración valida y normaliza los archivos CSV según los parámetros definidos y los requerimientos definidos en el servidor. Además envía simultaneamente todos los archivos ZIP que se especifiquen.
 
 Cada archivo es firmado para impedir cualquier tipo de adulteración durane el proceso.
 
@@ -63,7 +63,7 @@ Una vez finalizado el envío FTP la herramienta finaliza notificando al servidor
 
 ### Archivos CSV
 
-Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con formato *CSV*. Si alguno de los archivos no supera la validación **todo el proceso será cancelado**. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
+Los archivos con extensión `.csv` o `.txt` serán procesados como archivos con formato CSV. Si alguno de los archivos no supera la validación **todo el proceso será cancelado**. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
 
 Esta herramienta es capaz de identificar el caracter utilizado para separar las columnas. La siguiente tabla muestra los caracteres habilitados para utilizarse como separadores y el orden en que son comprobados:
 
@@ -76,7 +76,7 @@ Esta herramienta es capaz de identificar el caracter utilizado para separar las 
 
 ### Archivos ZIP
 
-Este tipo de archivos solo será enviado sin ninguna validación adicional. Estos archivos deben contener los ficheros *PDF* con los respectivos análisis finalizados.
+Este tipo de archivos solo será enviado sin ninguna validación adicional. Estos archivos deben contener los ficheros PDF con los respectivos análisis finalizados.
 
 Cualquier otro fichero dentro será ignorado por el proceso de importación lanzado una vez se finaliza el envío.
 
@@ -87,7 +87,7 @@ Cualquier otro fichero dentro será ignorado por el proceso de importación lanz
 la-migrar c:\temp\*.csv c:\temp\*.zip
 ```
 
-> Incluye todos los archivos *.csv* y *.zip* ubicados en la carpeta *c:\temp*.
+> Incluye todos los archivos `.csv` y `.zip` ubicados en la carpeta `c:\temp`.
 
 ```
 la-migrar c:\temp\*.csv c:\temp\*.zip -enc 2
