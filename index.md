@@ -1,6 +1,6 @@
 Esta página describe el funcionamiento de la herramienta encargada de migrar los datos hacia el servidor Web que aloja la aplicación para uso exclusivo de clientes.
 
-Permite enviar toda la información en archivos con formato CSV de forma programada como manual. Además brinda la posibilidad de enviar archivos comprimidos ZIP con los ficheros PDF de cada uno de los análisis finalizados.
+Permite enviar toda la información en archivos con formato CSV de forma manual y programada. Además brinda la posibilidad de enviar archivos comprimidos ZIP con los ficheros PDF de cada uno de los análisis finalizados.
 
 <small>Actualización: **11/11/2020**.</small>
 
@@ -55,11 +55,11 @@ El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir 
 
 Las extensiones aceptadas son: `.csv`, `.txt` y `.zip`. Cualquier otro tipo de archivo será simplemente ignorado.
 
-El proceso de migración valida y normaliza los archivos CSV según los parámetros definidos y los requerimientos definidos en el servidor. Además envía simultaneamente todos los archivos ZIP que se especifiquen.
+El proceso de migración valida y normaliza los archivos CSV según los parámetros definidos y los requerimientos del servidor. Además envía simultaneamente todos los archivos ZIP que se especifiquen.
 
-Cada archivo es firmado para impedir cualquier tipo de adulteración durane el proceso.
+Cada archivo es firmado para impedir cualquier tipo de adulteración durante el proceso.
 
-Una vez finalizado el envío FTP la herramienta finaliza notificando al servidor que la importación debe comenzar.
+Una vez finalizado el envío FTP la herramienta notificará al servidor que la importación debe comenzar.
 
 ### Archivos CSV
 
@@ -76,9 +76,9 @@ Esta herramienta es capaz de identificar el caracter utilizado para separar las 
 
 ### Archivos ZIP
 
-Este tipo de archivos solo será enviado sin ninguna validación adicional. Estos archivos deben contener los ficheros PDF con los respectivos análisis finalizados.
+Estos archivos serán enviados sin ninguna validación adicional. Deben contener los ficheros PDF con los respectivos análisis finalizados.
 
-Cualquier otro fichero dentro será ignorado por el proceso de importación lanzado una vez se finaliza el envío.
+Cualquier otro fichero dentro será ignorado por el proceso de importación una vez finalizado el envío.
 
 
 ## Ejemplos
