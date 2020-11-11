@@ -55,9 +55,17 @@ El parámetro **archivos_migrar** es una lista de uno o más archivos a incluir 
 
 Las extensiones aceptadas son: *.csv*, *.txt* y *.zip*. Cualquier otro tipo de archivo será simplemente ignorado.
 
+El proceso de migración valida y normaliza los archivos *CSV* según los parámetros definidos y los requerimientos definidos en el servidor. Además envía simultaneamente todos los archivos *ZIP* que se especifiquen.
+
+Cada archivo es firmado para impedir cualquier tipo de adulteración durane el proceso.
+
+Una vez finalizado el envío FTP la herramienta finaliza notificando al servidor que la importación debe comenzar.
+
+### Archivos CSV
+
 Los archivos con extensión *.csv* o *.txt* serán procesados como archivos con formato *CSV*. Si alguno de los archivos no supera la validación **todo el proceso será cancelado**. Las líneas "en blanco" en este tipo de archivos serán ignoradas.
 
-Esta herramienta es capaz de identificar el caracter utilizado para separar las columnas. La siguiente lista muestra los caracteres habilitados para utilizarse como separadores y el orden en que son comprobados:
+Esta herramienta es capaz de identificar el caracter utilizado para separar las columnas. La siguiente tabla muestra los caracteres habilitados para utilizarse como separadores y el orden en que son comprobados:
 
 | Orden | Caracter | Nombre |
 |:-----:|:--------:|--------|
@@ -66,9 +74,11 @@ Esta herramienta es capaz de identificar el caracter utilizado para separar las 
 |   3   |**```[tab]```**| tabulador       |
 |   4   |**```'```**    | comilla simple       |
 
-Para el caso de los archivos *.zip* solo serán enviados sin ningún tipo de validación. Estos archivos comprimidos deben contener los ficheros *PDF* con los respectivos análisis finalizados.
+### Archivos ZIP
 
-> El proceso de importación lanzado una vez se finaliza el envío de archivos **ignorará cualquier fichero con otra extesión no mencionada**.
+Este tipo de archivos solo será enviado sin ninguna validación adicional. Estos archivos deben contener los ficheros *PDF* con los respectivos análisis finalizados.
+
+Cualquier otro fichero dentro será ignorado por el proceso de importación lanzado una vez se finaliza el envío.
 
 
 ## Ejemplos
