@@ -10,7 +10,7 @@ Permite enviar toda la información en archivos con formato CSV de forma manual 
 
 2. Descomprima el contenido del archivo del punto anterior en la carpeta deseada.
 
-3. Defina la variable de entorno **IMPORTACION-WEB** con el siguiente valor: <http://clientes.laboratorioazul.com.ar/js/cfg_migracion>
+3. Defina la variable de entorno **IMPORTACION-WEB** con el siguiente valor: `http://clientes.laboratorioazul.com.ar/js/cfg_migracion`
 
     A. Abra el **Panel de control** y diríjase a **Sistema y seguridad** / **Sistema**.
 
