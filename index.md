@@ -2,7 +2,7 @@ Esta página describe el funcionamiento de la herramienta encargada de migrar lo
 
 Permite enviar toda la información en archivos con formato CSV de forma manual y programada. Además brinda la posibilidad de enviar archivos comprimidos ZIP con los ficheros PDF de cada uno de los análisis finalizados.
 
-<small>Actualización: **11/11/2020**.</small>
+<small>Actualización: **21/11/2020**.</small>
 
 ## Instalación y configuración
 
